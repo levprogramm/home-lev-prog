@@ -1,5 +1,6 @@
 #[macro_use] extern crate text_io ;
 fn main (){
+let mut zi = 1;
 let i: i32  = read!();
 let s: char  = read!();
 let z: i32  = read!();
@@ -11,6 +12,7 @@ let zis = match s {
     '/' =>i/z,
     '!' => fac_recurs(i),
     '^' => power(i,z),
+    'k' => f1(zi,i),
     _ => 3,
  
     };
@@ -33,10 +35,10 @@ fn power (mut t: i32 ,mut k: i32) -> i32 {
         return b * b;
     }
 }
-fn coren(q:i32 , w: i32)-> i32{
+fn f1(q:i32 , w: i32)-> i32{
     if q * 100000 - w * w <=0{
-        println!("{}", w/100);
-    } else { coren(q , w+1)}
+        println!("{}", w/100)
+    } else { f1(q , w+1)}
         
 
 }
